@@ -83,3 +83,7 @@ If you have any questions, concerns, or feedback regarding this Privacy Policy o
 - **Email:** hakim.dilawar@gmail.com  
 - **Developer:** Self Audit Expense Tracker Team  
 - **Package Name:** `com.whattheapp.selfauditexpensetracker`
+
+---
+
+© 2026 Self Audit Expense Tracker. All rights reserved.
