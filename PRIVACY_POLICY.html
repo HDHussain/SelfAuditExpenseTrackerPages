@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Self Audit Expense Tracker</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-dark: #1d4ed8;
+            --text-color: #1f2937;
+            --text-muted: #4b5563;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --border-color: #e2e8f0;
+            --accent-bg: #eff6ff;
+            --accent-border: #bfdbfe;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --primary-color: #60a5fa;
+                --primary-dark: #3b82f6;
+                --text-color: #f3f4f6;
+                --text-muted: #9ca3af;
+                --bg-color: #0f172a;
+                --card-bg: #1e293b;
+                --border-color: #334155;
+                --accent-bg: #1e3a8a;
+                --accent-border: #1d4ed8;
+            }
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            padding: 24px 16px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 32px 24px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border: 1px solid var(--border-color);
+        }
+        header {
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 20px;
+            margin-bottom: 24px;
+        }
+        h1 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+        }
+        .meta-info {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+        .meta-info span {
+            display: inline-block;
+            margin-right: 16px;
+        }
+        h2 {
+            font-size: 1.35rem;
+            color: var(--primary-color);
+            margin-top: 28px;
+            margin-bottom: 12px;
+        }
+        p {
+            margin-bottom: 16px;
+            color: var(--text-color);
+        }
+        ul {
+            margin-bottom: 16px;
+            padding-left: 24px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .highlight-box {
+            background-color: var(--accent-bg);
+            border-left: 4px solid var(--primary-color);
+            padding: 16px;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95rem;
+        }
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+        }
+        th {
+            background-color: var(--accent-bg);
+            color: var(--primary-color);
+        }
+        code {
+            background-color: var(--accent-bg);
+            color: var(--primary-color);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 0.9em;
+        }
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Privacy Policy</h1>
+            <p style="font-size: 1.1rem; font-weight: 500;">Self Audit Expense Tracker</p>
+            <div class="meta-info">
+                <span><strong>Package:</strong> <code>com.whattheapp.selfauditexpensetracker</code></span>
+                <span><strong>Effective Date:</strong> March 30, 2025</span>
+            </div>
+        </header>
+
+        <section>
+            <h2>1. Overview & Core Privacy Commitment</h2>
+            <p><strong>Self Audit Expense Tracker</strong> is built with a fundamental commitment to user privacy. We believe your financial transaction data is personal and strictly private.</p>
+            <div class="highlight-box">
+                <p><strong>100% On-Device Local Processing:</strong> All SMS and RCS message reading, message parsing, transaction categorization, and expense calculations take place entirely locally on your Android device. No financial data ever leaves your device.</p>
+            </div>
+            <ul>
+                <li><strong>No Cloud Servers:</strong> We do not operate remote servers to collect, upload, or process your messages or financial records.</li>
+                <li><strong>No Data Sharing or Sales:</strong> Your data is never shared with third parties, advertisers, or data brokers.</li>
+                <li><strong>No Remote Analytics:</strong> We do not use third-party tracking or analytics SDKs to monitor your app usage.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>2. Information Processed Locally</h2>
+            <p>To automatically track and audit your expenses, the app processes the following information strictly on your local device:</p>
+            <ul>
+                <li><strong>SMS & RCS Messages:</strong> Messages received from financial institutions (banks, credit card issuers, payment services) containing debit or credit transaction alerts.</li>
+                <li><strong>App Notifications:</strong> Notifications generated by banking and digital wallet apps, accessed via Android's Notification Listener Service.</li>
+                <li><strong>Local Expense Records:</strong> Parsed data such as transaction amounts, merchant names, dates, and account categories.</li>
+            </ul>
+            <p>All data is saved exclusively inside the app's isolated local SQLite database (Room framework) on your device.</p>
+        </section>
+
+        <section>
+            <h2>3. Android Permissions & Usage</h2>
+            <p>To enable local transaction detection and expense management features, the app requests the following Android permissions:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Permission</th>
+                        <th>Purpose & Local Usage Scope</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>android.permission.READ_SMS</code></td>
+                        <td>Scans SMS inbox locally to detect past bank transaction alerts and create local expense entries.</td>
+                    </tr>
+                    <tr>
+                        <td><code>android.permission.RECEIVE_SMS</code></td>
+                        <td>Listens for incoming bank SMS alerts in real-time to automatically log new expenses on-device.</td>
+                    </tr>
+                    <tr>
+                        <td><code>android.permission.POST_NOTIFICATIONS</code></td>
+                        <td>Displays local device notifications for instant expense logging alerts and daily audit summaries.</td>
+                    </tr>
+                    <tr>
+                        <td><code>android.permission.BIND_NOTIFICATION_LISTENER_SERVICE</code><br>(NotificationListenerService)</td>
+                        <td>Detects incoming banking app and RCS notifications locally to capture non-SMS payment alerts (e.g., UPI, digital wallets).</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><em>Note: None of the data accessed via these permissions is ever transmitted off your device.</em></p>
+        </section>
+
+        <section>
+            <h2>4. Zero Third-Party Sharing</h2>
+            <p>We maintain a zero-sharing architecture:</p>
+            <ul>
+                <li>We do not share any information with third parties.</li>
+                <li>We do not monetize or sell any user data.</li>
+                <li>We do not integrate third-party advertising or telemetry SDKs.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>5. Data Storage, Retention & Security</h2>
+            <ul>
+                <li><strong>Storage:</strong> All expense logs, custom tags, and budget settings are saved in private device storage.</li>
+                <li><strong>Control & Deletion:</strong> You have complete control over your data. You can edit or delete any expense record at any time inside the app, or clear all data via Android Settings.</li>
+                <li><strong>App Uninstall:</strong> Uninstalling the application completely deletes all locally stored database records from your device.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>6. Children's Privacy</h2>
+            <p>Self Audit Expense Tracker is not directed to individuals under the age of 13. The app does not collect personal data from anyone, including children.</p>
+        </section>
+
+        <section>
+            <h2>7. Contact Information</h2>
+            <p>If you have any questions or concerns regarding this Privacy Policy, please contact the developer at:</p>
+            <div class="highlight-box">
+                <p><strong>Email:</strong> <a href="mailto:hakim.dilawar@gmail.com" style="color: var(--primary-color);">hakim.dilawar@gmail.com</a></p>
+                <p><strong>App:</strong> Self Audit Expense Tracker (<code>com.whattheapp.selfauditexpensetracker</code>)</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Self Audit Expense Tracker. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
